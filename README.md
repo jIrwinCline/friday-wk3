@@ -3,6 +3,7 @@
 #### input gathering machine to change numbers into specific nonsense 6/7/2019
 
 #### By Jacob Irwin-Cline
+#### Link https://github.com/jIrwinCline/friday-wk3.git
 
 ## Description
 
