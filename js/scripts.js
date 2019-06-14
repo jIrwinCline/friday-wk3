@@ -6,6 +6,12 @@ function changeToArr(inputNum) {
   }
   return numberArr;
 };
+function changeToBoop(array)  {
+  var boopArr = array;
+  for(i=0;i<boopArr.length;i++){
+    
+  }
+};
 
 
 
@@ -19,8 +25,10 @@ $(document).ready(function(){
     var value = $("input").val();
     console.log("here " + value);
     var array1 = changeToArr(value).reverse();
-    console.log(array1)
+    console.log(array1);
+    var array2 = changeToBoop(array1);
     $(".results").text(array1);
+
   });
 
 });
