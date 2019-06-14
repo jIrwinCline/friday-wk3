@@ -9,7 +9,9 @@ function changeToArr(inputNum) {
 function changeToBoop(array)  {
   var boopArr = array;
   for(i=0;i<boopArr.length;i++){
-    
+    if(boopArr[i] === 1) {
+      boopArr[i] = ""
+    }
   }
 };
 
