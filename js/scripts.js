@@ -1,12 +1,11 @@
-function changeArr(inputNum) {
+function changeToArr(inputNum) {
   //// for loop to create a number in an array for each number less than input number
   var numberArr = [];
   for(var i=inputNum; i>0; i--) {
     numberArr.push(i);
   }
   return numberArr;
-
-}
+};
 
 
 
@@ -19,9 +18,9 @@ $(document).ready(function(){
     event.preventDefault();
     var value = $("input").val();
     console.log("here " + value);
-    var array1 = changeArr(value);
+    var array1 = changeToArr(value).reverse();
     console.log(array1)
-    $(".results").text(value);
+    $(".results").text(array1);
   });
 
 });
