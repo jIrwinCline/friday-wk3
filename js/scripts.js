@@ -24,7 +24,7 @@ function changeToBoop(array)  {
       if(boopArr[i] == '13') {
         boopArr[i] = "I'm sorry, Dave. I'm afraid I can't do that.";
       }
-      if{boopArr[i] == '21'} {
+      if(boopArr[i] == '21') {
         boopArr[i] = "Boop";
       }
       if(boopArr[i] == '32') {
