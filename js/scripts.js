@@ -1,18 +1,28 @@
 function changeToArr(inputNum) {
   //// for loop to create a number in an array for each number less than input number
   var numberArr = [];
-  for(var i=inputNum; i>0; i--) {
-    numberArr.push(i);
+  for(var i=inputNum; i>=0; i--) {
+    numberArr.push(i.toString());
   }
   return numberArr;
 };
 function changeToBoop(array)  {
   var boopArr = array;
   for(i=0;i<boopArr.length;i++){
-    if(boopArr[i] === 1) {
-      boopArr[i] = ""
+    if() {
+        
+      if(boopArr[i].includes('1')) {
+        boopArr[i] = "Beep!";
+      }
+      if(boopArr[i].includes('2')) {
+        boopArr[i] = "Boop!";
+      }
+      if(boopArr[i].includes('3')) {
+        boopArr[i] = "I'm sorry, Dave. I'm afraid I can't do that."
+      }
     }
   }
+  return boopArr;
 };
 
 
@@ -29,7 +39,7 @@ $(document).ready(function(){
     var array1 = changeToArr(value).reverse();
     console.log(array1);
     var array2 = changeToBoop(array1);
-    $(".results").text(array1);
+    $(".results").text(array2);
 
   });
 
