@@ -34,6 +34,30 @@ function changeToBoop(array)  {
   }
   return boopArr;
 };
+//------------------
+var timePerLetter = 400;
+
+function typeOnScreen(text) {
+  var index = 0;
+
+  var typeNextLetter = function() {
+    if (index < text.length) {
+      var CHAR = text[index];
+
+      switch(CHAR) {
+        default:
+          $('.results').append(CHAR + ' ');
+          break;
+      }
+
+      index++;
+
+      setTimeout(typeNextLetter, timePerLetter);
+    }
+  }
+
+  typeNextLetter();
+}
 
 
 
@@ -49,7 +73,8 @@ $(document).ready(function(){
     var array1 = changeToArr(value).reverse();
     console.log(array1);
     var array2 = changeToBoop(array1);
-    $(".results").text(array2);
+    $(".results").append(typeOnScreen(array2));
+
 
   });
 
