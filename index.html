@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link type="stylesheet" src="css/bootstrap.css">
-    <link type="stylesheet" src="css/styles.css">
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Beep Boop</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="card">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Beep Boop</title>
+</head>
+<body>
+  <br><br>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
         <h2>Welcome to our Beep Boop Machine</h2>
       </div>
-      <div class="input">
-        <form id="input">
-          <label for="input">Please give us a number</label>
-          <input type="text" id="inputNum">
-          <button type="submit" name="button">Click Me!</button>
-        </form>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
 
+        <div class="input card-body border">
+          <form id="input">
+            <div class="card-header">
+
+              <label for="input">Please give us a number</label>
+            </div>
+            <input type="text" id="inputNum">
+            <button type="submit" name="button">Click Me!</button>
+          </form>
+
+        </div>
       </div>
-      <div class="results">
-        <p></p>
+      <div class="col-md-6">
+        <div class="results">
+          <p></p>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
