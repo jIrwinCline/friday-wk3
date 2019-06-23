@@ -35,11 +35,13 @@ function changeToBoop(array)  {
   return boopArr;
 };
 //------------------
-var timePerLetter = 400;
 
 function typeOnScreen(text) {
+  var timePerIndex = 400;
   var index = 0;
-
+  var showBtn = function () {
+    $("#beepBtn").show();
+  }
   var typeNextLetter = function() {
     if (index < text.length) {
       var CHAR = text[index];
@@ -52,7 +54,8 @@ function typeOnScreen(text) {
 
       index++;
 
-      setTimeout(typeNextLetter, timePerLetter);
+      setTimeout(typeNextLetter, timePerIndex);
+      setTimeout(showBtn, (timePerIndex*2) * text.length)
     }
   }
 
@@ -64,14 +67,15 @@ function typeOnScreen(text) {
 
 
 
+
 /////////////////////////////////////
 $(document).ready(function(){
   $('form').submit(function(event) {
     event.preventDefault();
+    $("#beepBtn").hide();
+    $(".results").text('');
     var value = $("input").val();
-    console.log("here " + value);
     var array1 = changeToArr(value).reverse();
-    console.log(array1);
     var array2 = changeToBoop(array1);
     $(".results").append(typeOnScreen(array2));
 
