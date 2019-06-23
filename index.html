@@ -9,8 +9,9 @@
 </head>
 <body>
   <br><br>
+
   <div class="container">
-    <div class="card">
+    <div class="card box1">
       <div class="card-body">
         <h2>Welcome to our Beep Boop Machine</h2>
       </div>
@@ -19,7 +20,7 @@
     <div class="row">
       <div class="col-md-6">
 
-        <div class="input card border">
+        <div class="input card">
           <form id="input">
             <div class="card-header bg-warning">
 
@@ -28,8 +29,9 @@
             <div class="card-body">
 
             <br>
-            <input type="text" id="inputNum">
-            <button id="beepBtn" type="submit" name="button">Click Me!</button>
+            <input class="form-control" type="text" id="inputNum">
+            <br><br>
+            <button class="btn btn-primary btn-lg" id="beepBtn" type="submit" name="button">Click Me!</button>
           </form>
 
         </div>
@@ -56,7 +58,10 @@
         <h1>Beep Boop says:</h1>
       </div>
         <div class="card-body">
+          <div class="insideResultIndex">
+
           <h2></h2>
+        </div>
         </div>
       </div>
     </div>
