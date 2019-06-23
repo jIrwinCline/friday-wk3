@@ -44,11 +44,12 @@ function typeOnScreen(text) {
   }
   var typeNextLetter = function() {
     if (index < text.length) {
-      var CHAR = text[index];
+      var beep = text[index];
 
-      switch(CHAR) {
+      switch(beep) {
         default:
-          $('.results').append(CHAR + ' ');
+          $('.results').append(beep + ' ');
+          $('.resultIndex h2').text(beep);
           break;
       }
 
@@ -78,7 +79,7 @@ $(document).ready(function(){
     var array1 = changeToArr(value).reverse();
     var array2 = changeToBoop(array1);
     $(".results").append(typeOnScreen(array2));
-
+    printIndex(array2);
 
   });
 
